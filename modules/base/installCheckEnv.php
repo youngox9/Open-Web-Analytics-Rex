@@ -68,18 +68,11 @@ class owa_installCheckEnvController extends owa_installController {
         }
 
         // check for magic_quotes
-        if ( function_exists( 'get_magic_quotes_gpc' ) ) {
-
-            $magic_quotes = get_magic_quotes_gpc();
-
-            if ( $magic_quotes ) {
-
-                $errors['magic_quotes_gpc']['name'] = 'magic_quotes_gpc';
-                $errors['magic_quotes_gpc']['value'] = $magic_quotes;
-                $errors['magic_quotes_gpc']['msg'] = "The magic_quotes_gpc PHP INI directive must be set to 'OFF' in order for OWA domstreams to operate correctly.";
-                $bad_environment = true;
-
-            }
+        if (version_compare(PHP_VERSION, '7.0.0') < 0 && get_magic_quotes_gpc()) {
+            $errors['magic_quotes_gpc']['name'] = 'magic_quotes_gpc';
+            $errors['magic_quotes_gpc']['value'] = true;
+            $errors['magic_quotes_gpc']['msg'] = "The magic_quotes_gpc PHP INI directive must be set to 'OFF' in order for OWA domstreams to operate correctly.";
+            $bad_environment = true;
         }
         
         // check to ensure tha the vendors dir exist

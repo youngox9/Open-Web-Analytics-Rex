@@ -35,22 +35,22 @@
  *
  */
 
-define('OWA_DB_TYPE', 'yourdbtypegoeshere'); // options: mysql
-define('OWA_DB_NAME', 'yourdbnamegoeshere'); // name of the database
-define('OWA_DB_HOST', 'yourdbhostgoeshere'); // host name of the server housing the database
-define('OWA_DB_USER', 'yourdbusergoeshere'); // database user
+define('OWA_DB_TYPE', 'mysql'); // options: mysql
+define('OWA_DB_NAME', 'rextest'); // name of the database
+define('OWA_DB_HOST', '85.10.205.173'); // host name of the server housing the database
+define('OWA_DB_USER', 'rextest'); // database user
 define('OWA_DB_PORT', '3306'); // port of database
-define('OWA_DB_PASSWORD', 'yourdbpasswordgoeshere'); // database user's password
+define('OWA_DB_PASSWORD', 'zero9765'); // database user's password
 
 /**
  * AUTHENTICATION KEYS AND SALTS
  *
  * Change these to different unique phrases.
  */
-define('OWA_NONCE_KEY', 'yournoncekeygoeshere');
-define('OWA_NONCE_SALT', 'yournoncesaltgoeshere');
-define('OWA_AUTH_KEY', 'yourauthkeygoeshere');
-define('OWA_AUTH_SALT', 'yourauthsaltgoeshere');
+define('OWA_NONCE_KEY', 'AAAAAA');
+define('OWA_NONCE_SALT', 'AAAAAA');
+define('OWA_AUTH_KEY', 'AAAAAA');
+define('OWA_AUTH_SALT', 'AAAAAA');
 
 /**
  * PUBLIC URL
@@ -59,7 +59,7 @@ define('OWA_AUTH_SALT', 'yourauthsaltgoeshere');
  * Don't forget the slash at the end.
  */
  
-define('OWA_PUBLIC_URL', 'http://domain/path/to/owa/');
+define('OWA_PUBLIC_URL', 'https://ashy-sky-43c2fd38b6074ba9aecc22f556deba16.azurewebsites.net/');
 
 /**
  * OWA ERROR HANDLER
@@ -89,7 +89,7 @@ define('OWA_PUBLIC_URL', 'http://domain/path/to/owa/');
  * Override setting to cache objects. Caching will increase performance.
  */
 
-//define('OWA_CACHE_OBJECTS', true);
+//define('OWA_CACHE_OBJECTS', true);11
 
 /**
  * CONFIGURATION ID
