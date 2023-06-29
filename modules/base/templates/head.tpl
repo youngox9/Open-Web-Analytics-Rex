@@ -1,4 +1,5 @@
 <!-- HEAD Elements -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <?php if(!empty($css)): ?>
 <?php foreach ($css as $cssfile): ?>
 <LINK REL=StyleSheet HREF="<?php echo $cssfile['url'];?>" TYPE="text/css">

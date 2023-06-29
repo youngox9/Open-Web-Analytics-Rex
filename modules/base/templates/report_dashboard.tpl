@@ -72,11 +72,6 @@
                 </div>
                 <div id="test"></div>
             </div>
-
-            <div class="owa_reportSectionContent">
-                <div class="section_header">OWA News</div>
-                <?php echo $this->getWidget('base.widgetOwaNews','',false);?>
-            </div>
         </TD>
     </TR>
 </table>
