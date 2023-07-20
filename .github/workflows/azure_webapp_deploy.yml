@@ -1,0 +1,25 @@
+name: Azure Web App Deployment
+
+on:
+  push:
+    branches:
+      - main # 這裡可以更改成您想要觸發自動部署的分支名稱，例如 master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Install Azure Web App extension
+        run: az extension add --name webapp
+
+      - name: Deploy to Azure Web App
+        run: az webapp up --name TEST --resource-group rextest_group --runtime "PHP:8.0" --os-type=linux

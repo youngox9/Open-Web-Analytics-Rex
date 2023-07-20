@@ -6,3 +6,4 @@ modules/base/js/owa.tracker-combined-min.js
 package-lock.json
 composer.lock
 .azure/config
+.DS_Store
